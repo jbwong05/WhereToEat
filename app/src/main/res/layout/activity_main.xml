@@ -147,12 +147,14 @@
     <TextView
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:textColor="@android:color/black"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chosenLabel" />
@@ -167,5 +169,16 @@
         android:text="@string/sixty_four_north"
         app:layout_constraintStart_toEndOf="@+id/bistro"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/selectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onSelectAll"
+        android:text="@string/select_all"
+        app:layout_constraintStart_toEndOf="@+id/sixtyFour"
+        app:layout_constraintTop_toBottomOf="@+id/sixtyFourNorth" />
 
 </android.support.constraint.ConstraintLayout>

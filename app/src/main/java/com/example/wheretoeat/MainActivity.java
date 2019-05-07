@@ -6,12 +6,12 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private TextView resultText;
-    private ArrayList<String> selectedPlaces;
+    private SparseArray<String> selectedPlaces;
     private SparseArray<String> map;
+    private CheckBox[] checkBoxes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
         resultText.setText("");
 
-        selectedPlaces = new ArrayList<>();
+        selectedPlaces = new SparseArray<>();
         map = new SparseArray<>();
+        checkBoxes = new CheckBox[10];
 
         setupSparseArray();
+        setupCheckboxArray();
     }
 
     private void setupSparseArray() {
@@ -40,11 +42,38 @@ public class MainActivity extends AppCompatActivity {
         map.append(R.id.sixtyFourNorth, getResources().getString(R.string.sixty_four_north));
     }
 
+    private void setupCheckboxArray() {
+        checkBoxes[0] = findViewById(R.id.bistro);
+        checkBoxes[1] = findViewById(R.id.sixtyFour);
+        checkBoxes[2] = findViewById(R.id.pines);
+        checkBoxes[3] = findViewById(R.id.ovt);
+        checkBoxes[4] = findViewById(R.id.goodies);
+        checkBoxes[5] = findViewById(R.id.ventanas);
+        checkBoxes[6] = findViewById(R.id.cv);
+        checkBoxes[7] = findViewById(R.id.foodworx);
+        checkBoxes[8] = findViewById(R.id.pc);
+        checkBoxes[9] = findViewById(R.id.sixtyFourNorth);
+    }
+
     public void onCheckboxClicked(View view) {
         if(((CheckBox) view).isChecked()){
-            selectedPlaces.add(map.get(view.getId()));
+            selectedPlaces.put(view.getId(), map.get(view.getId()));
         } else {
-            selectedPlaces.remove(map.get(view.getId()));
+            selectedPlaces.remove(view.getId());
+        }
+    }
+
+    public void onSelectAll(View view) {
+        boolean newStatus = (((CheckBox) view).isChecked());
+
+        for(CheckBox checkBox : checkBoxes) {
+            checkBox.setChecked(newStatus);
+
+            if(newStatus) {
+                selectedPlaces.put(checkBox.getId(), map.get(checkBox.getId()));
+            } else {
+                selectedPlaces.remove(checkBox.getId());
+            }
         }
     }
 
@@ -53,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             resultText.setText(getResources().getString(R.string.no_places_selected));
         } else {
             int randomIndex = (int) (Math.random() * selectedPlaces.size());
-            resultText.setText(selectedPlaces.get(randomIndex));
+            resultText.setText(selectedPlaces.get(selectedPlaces.keyAt(randomIndex)));
         }
     }
 
