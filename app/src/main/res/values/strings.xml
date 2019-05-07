@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Where to Eat</string>
+    <string name="places_label">Places to eat:</string>
+    <string name="bistro">Bistro</string>
+    <string name="sixty_four">64</string>
+    <string name="pines">Pines</string>
+    <string name="goodies">Goodies</string>
+    <string name="ovt">OVT</string>
+    <string name="cafe_v">Ventanas</string>
+    <string name="cv">CV</string>
+    <string name="foodworx">Foodworx</string>
+    <string name="pc">PC</string>
+    <string name="sixty_four_north">64 North</string>
+    <string name="button_label">Choose random place to eat</string>
+    <string name="chosen_label">Chosen Place:</string>
+    <string name="no_places_selected">Please select a place to eat</string>
+</resources>
