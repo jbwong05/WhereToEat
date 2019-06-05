@@ -10,11 +10,14 @@
         android:id="@+id/bistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="11dp"
+        android:layout_marginEnd="180dp"
         android:onClick="onCheckboxClicked"
         android:text="@string/bistro"
-        app:layout_constraintStart_toEndOf="@+id/goodies"
+        app:layout_constraintBaseline_toBaselineOf="@+id/goodies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chosenLabel"
         app:layout_constraintTop_toBottomOf="@+id/sixtyFourNorth" />
 
     <CheckBox
@@ -87,23 +90,25 @@
         android:id="@+id/foodworx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="154dp"
         android:onClick="onCheckboxClicked"
         android:text="@string/foodworx"
-        app:layout_constraintStart_toEndOf="@+id/sixtyFour"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/sixtyFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
 
     <CheckBox
         android:id="@+id/pc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="200dp"
         android:onClick="onCheckboxClicked"
         android:text="@string/pc"
-        app:layout_constraintStart_toEndOf="@+id/pines"
-        app:layout_constraintTop_toBottomOf="@+id/foodworx" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/pines"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
 
     <TextView
         android:id="@+id/placesLabel"
@@ -152,6 +157,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -162,22 +168,25 @@
         android:id="@+id/sixtyFourNorth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="11dp"
+        android:layout_marginEnd="162dp"
         android:onClick="onCheckboxClicked"
         android:text="@string/sixty_four_north"
-        app:layout_constraintStart_toEndOf="@+id/ovt"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ovt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chosenLabel"
         app:layout_constraintTop_toBottomOf="@+id/pc" />
 
     <CheckBox
         android:id="@+id/selectAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="11dp"
         android:onClick="onSelectAll"
         android:text="@string/select_all"
-        app:layout_constraintStart_toEndOf="@+id/ventanas"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ventanas"
+        app:layout_constraintStart_toStartOf="@+id/bistro"
         app:layout_constraintTop_toBottomOf="@+id/bistro" />
 
 </android.support.constraint.ConstraintLayout>
