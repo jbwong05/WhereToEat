@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -83,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             int randomIndex = (int) (Math.random() * selectedPlaces.size());
             resultText.setText(selectedPlaces.get(selectedPlaces.keyAt(randomIndex)));
+
+            // Scrolls to result if necessary
+            resultText.requestFocus();
         }
     }
 

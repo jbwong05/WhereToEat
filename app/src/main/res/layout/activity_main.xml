@@ -6,187 +6,206 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/bistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="180dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/bistro"
-        app:layout_constraintBaseline_toBaselineOf="@+id/goodies"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/chosenLabel"
-        app:layout_constraintTop_toBottomOf="@+id/sixtyFourNorth" />
-
-    <CheckBox
-        android:id="@+id/sixtyFour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/sixty_four"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/placesLabel" />
-
-    <CheckBox
-        android:id="@+id/ovt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/ovt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pines" />
-
-    <CheckBox
-        android:id="@+id/goodies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/goodies"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ovt" />
-
-    <CheckBox
-        android:id="@+id/pines"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/pines"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sixtyFour" />
-
-    <CheckBox
-        android:id="@+id/ventanas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/cafe_v"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goodies" />
-
-    <CheckBox
-        android:id="@+id/cv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/cv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ventanas" />
-
-    <CheckBox
-        android:id="@+id/foodworx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="154dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/foodworx"
-        app:layout_constraintBaseline_toBaselineOf="@+id/sixtyFour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
-
-    <CheckBox
-        android:id="@+id/pc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="200dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/pc"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pines"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
-
-    <TextView
-        android:id="@+id/placesLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:text="@string/places_label"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/generateButton"
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="8dp"
-        android:onClick="onButtonPress"
-        android:text="@string/button_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv" />
-
-    <TextView
-        android:id="@+id/chosenLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/chosen_label"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/generateButton" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/resultText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chosenLabel" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-    <CheckBox
-        android:id="@+id/sixtyFourNorth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="162dp"
-        android:onClick="onCheckboxClicked"
-        android:text="@string/sixty_four_north"
-        app:layout_constraintBaseline_toBaselineOf="@+id/ovt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/chosenLabel"
-        app:layout_constraintTop_toBottomOf="@+id/pc" />
+            <CheckBox
+                android:id="@+id/bistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="180dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/bistro"
+                app:layout_constraintBaseline_toBaselineOf="@+id/goodies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chosenLabel"
+                app:layout_constraintTop_toBottomOf="@+id/sixtyFourNorth" />
 
-    <CheckBox
-        android:id="@+id/selectAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:onClick="onSelectAll"
-        android:text="@string/select_all"
-        app:layout_constraintBaseline_toBaselineOf="@+id/ventanas"
-        app:layout_constraintStart_toStartOf="@+id/bistro"
-        app:layout_constraintTop_toBottomOf="@+id/bistro" />
+            <CheckBox
+                android:id="@+id/sixtyFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/sixty_four"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/placesLabel" />
+
+            <CheckBox
+                android:id="@+id/ovt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/ovt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pines" />
+
+            <CheckBox
+                android:id="@+id/goodies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/goodies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ovt" />
+
+            <CheckBox
+                android:id="@+id/pines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/pines"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sixtyFour" />
+
+            <CheckBox
+                android:id="@+id/ventanas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/cafe_v"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodies" />
+
+            <CheckBox
+                android:id="@+id/cv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/cv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ventanas" />
+
+            <CheckBox
+                android:id="@+id/foodworx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="154dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/foodworx"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sixtyFour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
+
+            <CheckBox
+                android:id="@+id/pc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="200dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/pc"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chosenLabel" />
+
+            <TextView
+                android:id="@+id/placesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/places_label"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/generateButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="onButtonPress"
+                android:text="@string/button_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+            <TextView
+                android:id="@+id/chosenLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/chosen_label"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generateButton" />
+
+            <TextView
+                android:id="@+id/resultText"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chosenLabel" />
+
+            <CheckBox
+                android:id="@+id/sixtyFourNorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="162dp"
+                android:onClick="onCheckboxClicked"
+                android:text="@string/sixty_four_north"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ovt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/chosenLabel"
+                app:layout_constraintTop_toBottomOf="@+id/pc" />
+
+            <CheckBox
+                android:id="@+id/selectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:onClick="onSelectAll"
+                android:text="@string/select_all"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ventanas"
+                app:layout_constraintStart_toStartOf="@+id/bistro"
+                app:layout_constraintTop_toBottomOf="@+id/bistro" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
